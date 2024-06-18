@@ -10,7 +10,7 @@ const ListProduct = () => {
 
   const fetchInfo = async () => {
     try {
-      const response = await fetch('https://ecommercebackend-1-02g7.onrender.com/getAllProduct');
+      const response = await fetch('https://ecommercebackend-11d1.onrender.com/getAllProduct');
       const data = await response.json();
       setAllProducts(data.data);
     } catch (error) {
@@ -20,7 +20,7 @@ const ListProduct = () => {
 
   const removeProduct = async (id) => {
     try {
-      const res = await axios.delete(`https://ecommercebackend-1-02g7.onrender.com/removeProduct/${id}`);
+      const res = await axios.delete(`https://ecommercebackend-11d1.onrender.com/removeProduct/${id}`);
       if (res.data.success) { // Use res.data.success instead of res.success
         toast.success("Product deleted");
       }

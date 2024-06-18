@@ -55,7 +55,7 @@ const AddProduct = () => {
     formData.append('product', image);
 
     try {
-      const response = await axios.post('https://ecommercebackend-1-02g7.onrender.com/upload', formData, {
+      const response = await axios.post('https://ecommercebackend-11d1.onrender.com/upload', formData, {
         headers: {
           Accept: 'application/json',
         },
@@ -64,10 +64,10 @@ const AddProduct = () => {
       if (response.data.success) {
         console.log(response.data.image, "image")
         // Construct the full image URL
-        const baseUrl = 'https://ecommercebackend-1-02g7.onrender.com';
+        const baseUrl = 'https://ecommercebackend-11d1.onrender.com';
         product.image = `${baseUrl}/images/${response.data.image}`;
 
-        const addProductResponse = await axios.post("https://ecommercebackend-1-02g7.onrender.com/addProducts", product, {
+        const addProductResponse = await axios.post("https://ecommercebackend-11d1.onrender.com/addProducts", product, {
           headers: {
             Accept: "application/json",
             "Content-type": "application/json"
